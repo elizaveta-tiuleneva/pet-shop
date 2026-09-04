@@ -1,13 +1,12 @@
-import Footer from "./layouts/Footer";
-import Header from "./layouts/Header";
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Footer />
-
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />} />
+    </Routes>
   );
 }
 
