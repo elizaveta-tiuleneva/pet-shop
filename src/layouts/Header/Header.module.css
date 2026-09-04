@@ -33,7 +33,6 @@
 }
 
 .nav a {
-  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
@@ -77,7 +76,6 @@
   background-color: rgba(13, 80, 255, 1);
   color: rgba(255, 255, 255, 1);
 
-  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
