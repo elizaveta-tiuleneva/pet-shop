@@ -1,0 +1,80 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+
+  top: 80px;
+  left: 40px;
+  right: 40px;
+
+  height: 310px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.title {
+  max-width: 1000px;
+  margin: 0;
+
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 110%;
+
+  color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: 470px;
+  }
+
+  .content {
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    height: auto;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 110%;
+  }
+
+  .image {
+    object-position: center;
+  }
+}
+
+
+
+@media (max-width: 450px) {
+  .hero {
+    height: 420px;
+  }
+
+}

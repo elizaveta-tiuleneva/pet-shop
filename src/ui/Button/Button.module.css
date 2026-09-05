@@ -1,0 +1,24 @@
+.button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  transition: background-color 0.2s ease;
+}
+
+.hero {
+  width: 218px;
+  height: 58px;
+  padding: 0;
+  flex-shrink: 0;
+
+  background-color: rgba(13, 80, 255, 1);
+  color: #fff;
+}
+
+.hero:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
