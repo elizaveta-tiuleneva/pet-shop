@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { fetchCategories } from "../../store/categoriesSlice";
 import CategoryCard from "../CategoryCard";
 import styles from "./Categories.module.css";
+import SectionHeader from "../SectionHeader";
 
 function Categories() {
   const dispatch = useDispatch();
@@ -16,17 +16,11 @@ function Categories() {
 
   return (
     <section className={styles.categories}>
-<div className={styles.header}>
-  <h2 className={styles.title}>Categories</h2>
-
-  <div className={styles.navigation}>
-    <div className={styles.line}></div>
-
-    <Link to="/categories" className={styles.allCategories}>
-      All categories
-    </Link>
-  </div>
-</div>
+      <SectionHeader
+        title="Categories"
+        linkText="All categories"
+        to="/categories"
+      />
 
       <div className={styles.list}>
         {categories.slice(0, 4).map((category) => (
