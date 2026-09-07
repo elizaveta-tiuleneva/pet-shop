@@ -40,6 +40,10 @@
   text-decoration: none;
 }
 
+.nav a:hover {
+  color: rgba(13, 80, 255, 1);
+}
+
 .cart {
   position: relative;
 
