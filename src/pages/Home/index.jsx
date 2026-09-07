@@ -1,6 +1,7 @@
 import Hero from "../../components/Hero";
 import Categories from "../../components/Categories";
 import DiscountForm from "../../components/DiscountForm";
+import Sale from "../../components/Sale";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Hero />
       <Categories />
       <DiscountForm />
+      <Sale />
     </>
   );
 }

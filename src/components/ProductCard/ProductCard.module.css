@@ -1,0 +1,162 @@
+.card {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  color: rgba(40, 40, 40, 1);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 316 / 284;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
+  background-color: #fff;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.discount {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background-color: rgba(13, 80, 255, 1);
+    color: rgba(255, 255, 255, 1);
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+}
+
+.info {
+     padding: 20px 32px 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: rgba(40, 40, 40, 1);
+}
+
+.prices {
+    margin-top: 16px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.discountPrice {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 110%;
+
+    color: rgba(40, 40, 40, 1);
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+
+    color: rgba(139, 139, 139, 1);
+
+    text-decoration: line-through;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        height: auto;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .discountPrice {
+        font-size: 36px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .discount {
+        top: 12px;
+        right: 12px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .info {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .prices {
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .discountPrice {
+        font-size: 32px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .discount {
+        top: 12px;
+        right: 12px;
+        font-size: 16px;
+    }
+}

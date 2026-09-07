@@ -11,7 +11,7 @@ function Hero() {
       <div className={styles.content}>
         <h1 className={styles.title}>Amazing Discounts on Pets Products!</h1>
 
-        <Link to="/sales">
+        <Link to="/sales" className={styles.link}>
           <Button variant="hero">Check out</Button>
         </Link>
       </div>
