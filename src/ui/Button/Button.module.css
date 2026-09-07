@@ -1,24 +1,66 @@
 .button {
   border: none;
   border-radius: 6px;
-  cursor: pointer;
-  font-family: inherit;
+
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
-  transition: background-color 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-sizing: border-box;
 }
+
+/* HERO */
 
 .hero {
   width: 218px;
   height: 58px;
-  padding: 0;
-  flex-shrink: 0;
 
-  background-color: rgba(13, 80, 255, 1);
+  background-color: #0d50ff;
   color: #fff;
+
+  flex-shrink: 0;
 }
 
 .hero:hover {
   background-color: rgba(40, 40, 40, 1);
+}
+
+/* DISCOUNT FORM */
+
+.discount {
+  width: 516px;
+  height: 58px;
+  padding: 16px 32px;
+
+  background-color: #fff;
+  color: rgba(40, 40, 40, 1);
+}
+
+.discount:hover {
+  background-color: rgba(40, 40, 40, 1);
+  color: #fff;
+}
+
+/* FORM SUBMITTED */
+
+.submitted {
+  width: 516px;
+  height: 58px;
+  padding: 16px 32px;
+
+  background-color: rgba(241, 243, 244, 1);
+  color: rgba(13, 80, 255, 1);
+
+  cursor: default;
+}
+
+.submitted:hover {
+  background-color: rgba(241, 243, 244, 1);
+  color: rgba(13, 80, 255, 1);
 }
