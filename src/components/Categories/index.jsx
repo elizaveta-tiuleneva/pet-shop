@@ -5,6 +5,7 @@ import CategoryCard from "../CategoryCard";
 import styles from "./Categories.module.css";
 import SectionHeader from "../SectionHeader";
 
+
 function Categories() {
   const dispatch = useDispatch();
 

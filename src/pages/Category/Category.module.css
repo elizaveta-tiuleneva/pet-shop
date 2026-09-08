@@ -1,43 +1,5 @@
 .category {
- margin: 40px 40px 106px;
-}
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.breadcrumb,
-.breadcrumbCurrent {
-  height: 36px;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 126%;
-  text-decoration: none;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
-
-.breadcrumb {
-  color: rgb(139, 139, 139);
-}
-
-.breadcrumbCurrent {
-  color: rgb(40, 40, 40);
-}
-
-.breadcrumbLine {
-  width: 16px;
-  height: 1px;
-  background: rgb(221, 221, 221);
-  flex-shrink: 0;
+  margin: 40px 40px 106px;
 }
 
 .title {
@@ -257,28 +219,6 @@
     margin: 40px 40px 60px;
   }
 
-  .breadcrumbs {
-    margin-bottom: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 0;
-    overflow: visible;
-  }
-
-  .breadcrumbs a,
-  .breadcrumbs span {
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  .breadcrumbs span:last-child {
-    max-width: 100%;
-    overflow: visible;
-    text-overflow: clip;
-    white-space: nowrap;
-  }
-
   .filters {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -304,22 +244,16 @@
     flex-shrink: 0;
   }
 
-  .sort {
-    width: 200px;
-  }
-
-  .sortButton {
-    width: 200px;
-  }
-
+  .sort,
+  .sortButton,
   .sortList {
     width: 200px;
   }
 
-.products {
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
-  gap: 20px;
-}
+  .products {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+  }
 }
 
 @media (max-width: 450px) {

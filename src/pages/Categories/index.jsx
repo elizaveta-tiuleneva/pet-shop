@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCategories } from "../../store/categoriesSlice";
 import CategoryCard from "../../components/CategoryCard";
-import { Link } from "react-router-dom";
+
 
 import styles from "./Categories.module.css";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 function Categories() {
   const dispatch = useDispatch();
@@ -32,17 +33,9 @@ function Categories() {
 
   return (
     <main className={styles.categories}>
-<div className={styles.breadcrumbs}>
-  <Link to="/" className={styles.breadcrumb}>
-    Main page
-  </Link>
-
-  <span className={styles.breadcrumbLine}></span>
-
-  <span className={styles.breadcrumbCurrent}>
-    Categories
-  </span>
-</div>
+      <Breadcrumbs
+        items={[{ label: "Main page", to: "/" }, { label: "Categories" }]}
+      />
 
       <h1 className={styles.title}>Categories</h1>
 

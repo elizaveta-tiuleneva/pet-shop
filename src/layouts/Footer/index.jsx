@@ -18,7 +18,7 @@ function Footer() {
           <span>Socials</span>
 
           <div className={styles.socialIcons}>
-            <a href="#">
+            <a href="https://www.instagram.com/itcareerhub/">
               <img src={instagram} alt="Instagram" />
             </a>
 

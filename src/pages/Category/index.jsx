@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import ProductCard from "../../components/ProductCard";
 import styles from "./Category.module.css";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 function CategoryPage() {
   const { id } = useParams();
@@ -128,23 +129,13 @@ function CategoryPage() {
 
   return (
     <main className={styles.category}>
-<div className={styles.breadcrumbs}>
-  <Link to="/" className={styles.breadcrumb}>
-    Main page
-  </Link>
-
-  <span className={styles.breadcrumbLine}></span>
-
-  <Link to="/categories" className={styles.breadcrumb}>
-    Categories
-  </Link>
-
-  <span className={styles.breadcrumbLine}></span>
-
-  <span className={styles.breadcrumbCurrent}>
-    {category?.title}
-  </span>
-</div>
+<Breadcrumbs
+  items={[
+    { label: "Main page", to: "/" },
+    { label: "Categories", to: "/categories" },
+    { label: category?.title },
+  ]}
+/>
 
       <h1 className={styles.title}>{category?.title}</h1>
 
