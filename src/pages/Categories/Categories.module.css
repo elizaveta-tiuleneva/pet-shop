@@ -8,34 +8,38 @@
   margin-bottom: 40px;
 }
 
-.breadcrumbs span {
+.breadcrumb,
+.breadcrumbCurrent {
+  height: 36px;
   padding: 8px 16px;
-  border: 1px solid rgba(221, 221, 221, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 6px;
   font-size: 16px;
   font-weight: 500;
   line-height: 126%;
-  color: rgba(139, 139, 139, 1);
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
-.breadcrumbs span:first-child {
-  position: relative;
+.breadcrumb {
+  color: rgb(139, 139, 139);
 }
 
-.breadcrumbs span:first-child::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
+.breadcrumbCurrent {
+  color: rgb(40, 40, 40);
+}
+
+.breadcrumbLine {
   width: 16px;
   height: 1px;
-  background-color: rgba(221, 221, 221, 1);
+  background-color: rgb(221, 221, 221);
+  flex-shrink: 0;
 }
 
-.breadcrumbs span:last-child {
-  margin-left: 16px;
-  color: rgba(40, 40, 40, 1);
-}
 .title {
   margin: 0 0 40px;
   font-size: 64px;
@@ -66,7 +70,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .categories {
     margin: 32px 20px 50px;
@@ -87,7 +90,6 @@
   }
 }
 
-
 @media (max-width: 450px) {
   .categories {
     margin: 24px 20px 40px;
@@ -97,17 +99,15 @@
     margin-bottom: 24px;
   }
 
-  .breadcrumbs span {
+  .breadcrumb,
+  .breadcrumbCurrent {
+    height: 32px;
     padding: 6px 10px;
     font-size: 12px;
   }
 
-  .breadcrumbs span:first-child::after {
+  .breadcrumbLine {
     width: 12px;
-  }
-
-  .breadcrumbs span:last-child {
-    margin-left: 12px;
   }
 
   .title {

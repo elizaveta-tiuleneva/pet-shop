@@ -2,9 +2,13 @@ import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.css";
 
 function ProductCard({ product }) {
-  const discountPercent = Math.round(
-    ((product.price - product.discont_price) / product.price) * 100
-  );
+  const hasDiscount = product.discont_price !== null;
+
+  const discountPercent = hasDiscount
+    ? Math.round(
+        ((product.price - product.discont_price) / product.price) * 100
+      )
+    : 0;
 
   return (
     <Link
@@ -18,9 +22,11 @@ function ProductCard({ product }) {
           alt={product.title}
         />
 
-        <span className={styles.discount}>
-          -{discountPercent}%
-        </span>
+        {hasDiscount && (
+          <span className={styles.discount}>
+            -{discountPercent}%
+          </span>
+        )}
       </div>
 
       <div className={styles.info}>
@@ -29,13 +35,21 @@ function ProductCard({ product }) {
         </h3>
 
         <div className={styles.prices}>
-          <span className={styles.discountPrice}>
-            ${product.discont_price}
-          </span>
+          {hasDiscount ? (
+            <>
+              <span className={styles.discountPrice}>
+                ${product.discont_price}
+              </span>
 
-          <span className={styles.price}>
-            ${product.price}
-          </span>
+              <span className={styles.price}>
+                ${product.price}
+              </span>
+            </>
+          ) : (
+            <span className={styles.discountPrice}>
+              ${product.price}
+            </span>
+          )}
         </div>
       </div>
     </Link>

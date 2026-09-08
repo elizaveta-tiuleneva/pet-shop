@@ -113,23 +113,41 @@
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 18px;
-    }
+ .title {
+    font-size: 18px;
+    line-height: 130%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    min-height: auto;
+  }
 
-    .discountPrice {
-        font-size: 36px;
-    }
+  .info {
+    padding: 16px 20px 20px;
+  }
 
-    .price {
-        font-size: 18px;
-    }
+  .prices {
+    margin-top: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 
-    .discount {
-        top: 12px;
-        right: 12px;
-        font-size: 18px;
-    }
+  .discountPrice {
+    font-size: 36px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .discount {
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 450px) {

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCategories } from "../../store/categoriesSlice";
 import CategoryCard from "../../components/CategoryCard";
+import { Link } from "react-router-dom";
 
 import styles from "./Categories.module.css";
 
@@ -31,10 +32,17 @@ function Categories() {
 
   return (
     <main className={styles.categories}>
-      <div className={styles.breadcrumbs}>
-        <span>Main page</span>
-        <span>Categories</span>
-      </div>
+<div className={styles.breadcrumbs}>
+  <Link to="/" className={styles.breadcrumb}>
+    Main page
+  </Link>
+
+  <span className={styles.breadcrumbLine}></span>
+
+  <span className={styles.breadcrumbCurrent}>
+    Categories
+  </span>
+</div>
 
       <h1 className={styles.title}>Categories</h1>
 
