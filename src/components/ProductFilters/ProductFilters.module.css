@@ -1,0 +1,216 @@
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.priceFilter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filterTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  color: rgb(40, 40, 40);
+}
+
+.priceFilter input {
+  width: 112px;
+  height: 36px;
+  padding: 8px 16px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(40, 40, 40);
+  box-sizing: border-box;
+}
+
+.priceFilter input::-webkit-inner-spin-button,
+.priceFilter input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.priceFilter input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.priceFilter input::placeholder {
+  color: rgb(139, 139, 139);
+}
+
+.discountFilter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.discountFilter span {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  color: rgb(40, 40, 40);
+  white-space: nowrap;
+}
+
+.discountFilter input {
+  appearance: none;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  flex-shrink: 0;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.discountFilter input:checked {
+  background: rgb(13, 80, 255);
+  border-color: rgb(13, 80, 255);
+}
+
+.discountFilter input:checked::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 7px;
+  width: 8px;
+  height: 14px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sortFilter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sortFilter > span {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  color: rgb(40, 40, 40);
+}
+
+.sort {
+  position: relative;
+  width: 200px;
+}
+
+.sortButton {
+  width: 200px;
+  height: 36px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  color: rgb(40, 40, 40);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgb(40, 40, 40);
+  border-bottom: 2px solid rgb(40, 40, 40);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.arrowOpen {
+  transform: rotate(-135deg);
+}
+
+.sortList {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.sortOption {
+  width: 168px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgb(139, 139, 139);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.selectedOption {
+  color: rgb(40, 40, 40);
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 24px;
+  }
+
+  .priceFilter {
+    width: 100%;
+  }
+
+  .priceFilter input {
+    width: 112px;
+  }
+
+  .discountFilter {
+    flex-shrink: 0;
+  }
+
+  .sortFilter {
+    flex-shrink: 0;
+  }
+
+  .sort,
+  .sortButton,
+  .sortList {
+    width: 200px;
+  }
+}

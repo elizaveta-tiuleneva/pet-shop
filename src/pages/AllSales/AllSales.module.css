@@ -1,5 +1,5 @@
-.category {
-  margin: 40px 40px 106px;
+.allSales {
+  margin: 40px 40px 80px;
 }
 
 .title {
@@ -17,8 +17,8 @@
 }
 
 @media (max-width: 1024px) {
-  .category {
-    margin: 40px 40px 90px;
+  .allSales {
+    margin: 40px 40px 70px;
   }
 
   .title {
@@ -32,12 +32,15 @@
 }
 
 @media (max-width: 768px) {
-  .category {
+  .allSales {
     margin: 40px 40px 60px;
   }
 
   .products {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(
+      2,
+      minmax(200px, 1fr)
+    );
     gap: 20px;
   }
 }

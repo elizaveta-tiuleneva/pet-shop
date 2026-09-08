@@ -22,7 +22,7 @@ function Footer() {
               <img src={instagram} alt="Instagram" />
             </a>
 
-            <a href="#">
+            <a href="https://wa.me/493091588492">
               <img src={whatsapp} alt="WhatsApp" />
             </a>
           </div>

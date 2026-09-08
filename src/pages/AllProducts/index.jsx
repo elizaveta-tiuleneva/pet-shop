@@ -1,17 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import ProductCard from "../../components/ProductCard";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import ProductFilters from "../../components/ProductFilters";
+import ProductCard from "../../components/ProductCard";
 
-import styles from "./Category.module.css";
+import styles from "./AllProducts.module.css";
 
-function CategoryPage() {
-  const { id } = useParams();
-
-  const [category, setCategory] = useState(null);
+function AllProductsPage() {
   const [products, setProducts] = useState([]);
   const [status, setStatus] = useState("loading");
 
@@ -21,25 +17,24 @@ function CategoryPage() {
   const [sortType, setSortType] = useState("default");
 
   useEffect(() => {
-    const fetchCategory = async () => {
+    const fetchProducts = async () => {
       try {
         setStatus("loading");
 
         const response = await axios.get(
-          `http://localhost:3333/categories/${id}`
+          "http://localhost:3333/products/all"
         );
 
-        setCategory(response.data.category);
-        setProducts(response.data.data);
+        setProducts(response.data);
         setStatus("succeeded");
       } catch (error) {
-        console.error("Category loading error:", error);
+        console.error("Products loading error:", error);
         setStatus("failed");
       }
     };
 
-    fetchCategory();
-  }, [id]);
+    fetchProducts();
+  }, []);
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
@@ -122,11 +117,11 @@ function CategoryPage() {
   }
 
   if (status === "failed") {
-    return <p>Failed to load category.</p>;
+    return <p>Failed to load products.</p>;
   }
 
   return (
-    <div className={styles.category}>
+    <div className={styles.allProducts}>
       <Breadcrumbs
         items={[
           {
@@ -134,18 +129,12 @@ function CategoryPage() {
             to: "/",
           },
           {
-            label: "Categories",
-            to: "/categories",
-          },
-          {
-            label: category?.title,
+            label: "All products",
           },
         ]}
       />
 
-      <h1 className={styles.title}>
-        {category?.title}
-      </h1>
+      <h1 className={styles.title}>All products</h1>
 
       <ProductFilters
         priceFrom={priceFrom}
@@ -170,4 +159,4 @@ function CategoryPage() {
   );
 }
 
-export default CategoryPage;
+export default AllProductsPage;
