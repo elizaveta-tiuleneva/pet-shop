@@ -42,6 +42,26 @@
   color: rgba(40, 40, 40, 1);
 }
 
+.item a:hover {
+  color: rgba(139, 139, 139, 1);
+  background-color: rgba(241, 243, 244, 1);
+}
+
+.item a:active {
+  color: rgba(40, 40, 40, 1);
+  background-color: transparent;
+}
+
+.item span:hover {
+  color: rgba(139, 139, 139, 1);
+  background-color: rgba(241, 243, 244, 1);
+}
+
+.item span:active {
+  color: rgba(40, 40, 40, 1);
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
   .breadcrumbs {
     margin-bottom: 32px;

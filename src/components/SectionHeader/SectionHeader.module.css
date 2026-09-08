@@ -67,7 +67,7 @@
 
 .allCategories:active {
   color: rgba(40, 40, 40, 1);
-  background-color: none;
+  background-color: transparent;
 }
 
 
