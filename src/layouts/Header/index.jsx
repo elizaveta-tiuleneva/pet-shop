@@ -4,8 +4,12 @@ import styles from "./Header.module.css";
 import logo from "../../assets/icons/logo.svg";
 import shoppingBag from "../../assets/icons/shopping-bag.svg";
 
+import { useSelector } from "react-redux";
+
 function Header() {
-  const cartCount = 0;
+  const cartItems = useSelector((state) => state.cart.items);
+
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className={styles.header}>
@@ -21,9 +25,7 @@ function Header() {
       </nav>
 
       <NavLink to="/cart" className={styles.cart}>
-        {cartCount > 0 && (
-          <span className={styles.cartCount}>{cartCount}</span>
-        )}
+        {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
 
         <img src={shoppingBag} alt="Shopping cart" />
       </NavLink>

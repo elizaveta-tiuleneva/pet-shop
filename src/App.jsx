@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Category from "./pages/Category";
+import ProductPage from "./pages/Product";
 
 import NotFound from "./pages/NotFound";
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:id" element={<Category />} />
+        <Route path="/products/:id" element={<ProductPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
