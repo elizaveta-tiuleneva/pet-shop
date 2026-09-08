@@ -106,6 +106,63 @@
     border-color: rgba(255, 255, 255, 1);
 }
 
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(40, 40, 40, 0.4);
+}
+
+.modal {
+  position: relative;
+  width: 548px;
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: 12px;
+  background: rgb(13, 80, 255);
+  color: rgb(255, 255, 255);
+}
+
+.modalClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modalTitle {
+  margin: 0 48px 24px 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.modalText {
+  margin: 0;
+  max-width: 420px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modalText + .modalText {
+  margin-top: 8px;
+}
+
 @media (max-width: 1200px) {
     .discount {
         width: calc(100% - 40px);
@@ -188,6 +245,10 @@
     .inputs {
         gap: 16px;
     }
+      .modal {
+    width: 100%;
+    max-width: 548px;
+  }
 }
 @media (max-width: 450px) {
     .discount {
@@ -229,4 +290,20 @@
     .form button {
         width: 100%;
     }
+    .modal {
+    padding: 24px;
+  }
+
+  .modalTitle {
+    font-size: 28px;
+  }
+
+  .modalText {
+    font-size: 18px;
+  }
+
+  .modalClose {
+    top: 16px;
+    right: 16px;
+  }
 }
