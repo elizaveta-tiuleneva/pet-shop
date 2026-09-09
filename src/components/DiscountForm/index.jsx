@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 
 import Button from "../../ui/Button";
+import SuccessModal from "../SuccessModal";
+
 import pets from "../../assets/img/discount-pets.svg";
 import styles from "./DiscountForm.module.css";
 
@@ -108,38 +110,19 @@ function DiscountForm() {
         </div>
       </section>
 
-      {isModalOpen && (
-        <div
-          className={styles.modalOverlay}
-          onClick={() => setIsModalOpen(false)}
-        >
-          <div
-            className={styles.modal}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              className={styles.modalClose}
-              type="button"
-              onClick={() => setIsModalOpen(false)}
-              aria-label="Close"
-            >
-              ×
-            </button>
+      <SuccessModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Congratulations!"
+      >
+        <p>
+          Your 5% discount has been successfully applied.
+        </p>
 
-            <h2 className={styles.modalTitle}>
-              Congratulations!
-            </h2>
-
-            <p className={styles.modalText}>
-              Your 5% discount has been successfully applied.
-            </p>
-
-            <p className={styles.modalText}>
-              We’ll contact you shortly with the details.
-            </p>
-          </div>
-        </div>
-      )}
+        <p>
+          We’ll contact you shortly with the details.
+        </p>
+      </SuccessModal>
     </>
   );
 }

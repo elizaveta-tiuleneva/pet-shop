@@ -31,6 +31,24 @@
   background-color: rgba(40, 40, 40, 1);
 }
 
+.continue {
+  height: 58px;
+  padding: 16px 56px;
+
+  background-color: rgba(13, 80, 255, 1);
+  color: rgba(255, 255, 255, 1);
+
+  flex-shrink: 0;
+}
+
+.continue:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.continue:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
+
 /* DISCOUNT FORM */
 
 .discount {
@@ -107,6 +125,20 @@
   background-color: rgba(255, 255, 255, 1);
   color: rgba(40, 40, 40, 1);
 }
+
+.order {
+  width: 100%;
+  height: 58px;
+  padding: 16px 32px;
+  background-color: rgba(13, 80, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.order:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
+
+
 @media (max-width: 768px) {
   .card {
     height: 50px;

@@ -1,0 +1,331 @@
+.card {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 12px;
+
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.imageWrapper {
+  width: 200px;
+  min-width: 200px;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid rgba(221, 221, 221, 1);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+
+  color: rgba(40, 40, 40, 1);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove {
+  flex-shrink: 0;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  color: rgba(40, 40, 40, 1);
+
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.bottom {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.counter {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+.counter button {
+  width: 58px;
+  height: 58px;
+
+  padding: 0;
+
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+
+  color: rgba(139, 139, 139, 1);
+
+  font-family: inherit;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.counter span {
+  width: 96px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-left: 1px solid rgba(221, 221, 221, 1);
+  border-right: 1px solid rgba(221, 221, 221, 1);
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+
+  color: rgba(40, 40, 40, 1);
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.currentPrice {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+
+  color: rgba(40, 40, 40, 1);
+}
+
+.oldPrice {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+
+  color: rgba(139, 139, 139, 1);
+
+  text-decoration: line-through;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 2px solid rgba(139, 139, 139, 1);
+  border-radius: 4px;
+
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.checkbox input:checked + .checkmark {
+  background-color: rgba(13, 80, 255, 1);
+}
+
+@media (max-width: 1024px) {
+  .imageWrapper {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .bottom {
+    gap: 20px;
+  }
+
+  .counter span {
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 160px;
+  }
+
+  .imageWrapper {
+    width: 160px;
+    min-width: 160px;
+    height: 160px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .bottom {
+    margin-top: 24px;
+    gap: 16px;
+  }
+
+  .counter,
+  .counter button,
+  .counter span {
+    height: 50px;
+  }
+
+  .counter button {
+    width: 50px;
+  }
+
+  .counter span {
+    width: 60px;
+  }
+
+  .currentPrice {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    align-items: stretch;
+  }
+
+  .imageWrapper {
+    width: 116px;
+    min-width: 116px;
+    height: auto;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .top {
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .checkbox,
+  .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkmark {
+    font-size: 14px;
+  }
+
+  .remove {
+    font-size: 24px;
+  }
+
+  .bottom {
+    margin-top: 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .counter,
+  .counter button,
+  .counter span {
+    height: 40px;
+  }
+
+  .counter button {
+    width: 40px;
+  }
+
+  .counter span {
+    width: 50px;
+    font-size: 16px;
+  }
+
+  .prices {
+    gap: 8px;
+  }
+
+  .currentPrice {
+    font-size: 28px;
+  }
+
+  .oldPrice {
+    font-size: 16px;
+  }
+}

@@ -4,12 +4,10 @@ import axios from "axios";
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await axios.get(
-      "http://localhost:3333/products/all"
-    );
+    const response = await axios.get("http://localhost:3333/products/all");
 
     return response.data;
-  }
+  },
 );
 
 const productsSlice = createSlice({
@@ -27,6 +25,7 @@ const productsSlice = createSlice({
     builder
       .addCase(fetchProducts.pending, (state) => {
         state.status = "loading";
+        state.error = null;
       })
 
       .addCase(fetchProducts.fulfilled, (state, action) => {

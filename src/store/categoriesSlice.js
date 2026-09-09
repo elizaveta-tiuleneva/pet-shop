@@ -4,12 +4,10 @@ import axios from "axios";
 export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
   async () => {
-    const response = await axios.get(
-      "http://localhost:3333/categories/all"
-    );
+    const response = await axios.get("http://localhost:3333/categories/all");
 
     return response.data;
-  }
+  },
 );
 
 const categoriesSlice = createSlice({
@@ -27,6 +25,7 @@ const categoriesSlice = createSlice({
     builder
       .addCase(fetchCategories.pending, (state) => {
         state.status = "loading";
+        state.error = null;
       })
 
       .addCase(fetchCategories.fulfilled, (state, action) => {

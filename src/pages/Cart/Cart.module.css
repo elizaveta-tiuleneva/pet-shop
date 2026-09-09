@@ -1,0 +1,162 @@
+.cart {
+  margin: 40px 40px 80px;
+}
+
+.layout {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 780fr) minmax(0, 548fr);
+  gap: 32px;
+  align-items: start;
+}
+.items {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderDetails {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: rgba(241, 243, 244, 1);
+}
+.orderInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderTitle {
+  margin: 0 0 24px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+  color: rgba(40, 40, 40, 1);
+}
+
+.itemsCount {
+  margin: 0 0 18px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%;
+  color: rgba(139, 139, 139, 1);
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.total span {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%;
+  color: rgba(139, 139, 139, 1);
+}
+
+.total strong {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 110%;
+  color: rgba(40, 40, 40, 1);
+}
+
+.emptyCart {
+  margin-top: 32px;
+  width: 540px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.emptyText {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+
+  color: rgba(40, 40, 40, 1);
+}
+
+.continueLink {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .cart {
+    margin: 40px 40px 80px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .orderDetails {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    margin: 32px 20px 60px;
+  }
+
+  .layout {
+    margin-top: 32px;
+  }
+
+  .orderTitle {
+    font-size: 32px;
+  }
+
+  .itemsCount,
+  .total span {
+    font-size: 32px;
+  }
+
+  .total strong {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart {
+    margin: 24px 20px 40px;
+  }
+
+  .orderDetails {
+    padding: 24px 20px;
+    gap: 24px;
+  }
+
+  .orderTitle {
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+
+  .itemsCount {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+  .total span {
+    font-size: 28px;
+  }
+
+  .total strong {
+    font-size: 40px;
+  }
+}
