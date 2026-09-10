@@ -1,16 +1,45 @@
-# React + Vite
+# Pet Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce web application for pet products built with React.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Pet Shop Preview](./public/preview.png)
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[View Live Project](https://elizaveta-tiuleneva.github.io/pet-shop/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Product categories
+- Product catalog
+- Products by category
+- Sale products
+- Product details
+- Shopping cart
+- Responsive design
+
+## Tech Stack
+
+- React
+- JavaScript
+- Vite
+- React Router
+- Redux Toolkit
+- Axios
+- CSS Modules
+- REST API
+
+## Installation
+
+```bash
+git clone https://github.com/elizaveta-tiuleneva/pet-shop.git
+cd pet-shop
+npm install
+npm run dev
+```
+
+## Author
+
+Elizaveta Tiuleneva
