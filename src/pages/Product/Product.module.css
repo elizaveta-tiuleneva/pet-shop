@@ -108,6 +108,7 @@
   line-height: 130%;
   white-space: nowrap;
 }
+
 .actions {
   width: 100%;
   margin-top: 32px;
@@ -179,10 +180,7 @@
 }
 
 .collapsed {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  display: block;
 }
 
 .expanded {
@@ -190,6 +188,7 @@
 }
 
 .readMore {
+  display: none;
   margin-top: 16px;
   padding: 0;
   border: none;
@@ -223,6 +222,17 @@
   .actions {
     width: 548px;
     grid-template-columns: 200px 316px;
+  }
+
+  .collapsed {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .readMore {
+    display: inline-block;
   }
 }
 
