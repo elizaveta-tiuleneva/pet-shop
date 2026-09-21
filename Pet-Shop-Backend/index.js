@@ -13,7 +13,17 @@ const PORT = process.env.PORT || 3333;
 Category.hasMany(Product);
 
 const app = express();
-app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+    res.send('Pet Shop Backend is working');
+});
+
+app.get('/test', (req, res) => {
+    res.json({ message: 'API works' });
+});
+
+app.use(express.static('public'));
+
 app.use(cors({
     origin: '*'
 }));
