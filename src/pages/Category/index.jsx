@@ -26,7 +26,7 @@ function CategoryPage() {
         setStatus("loading");
 
         const response = await axios.get(
-          `http://localhost:3333/categories/${id}`
+          `https://pet-shop-ls17.onrender.com/categories/${id}`
         );
 
         setCategory(response.data.category);

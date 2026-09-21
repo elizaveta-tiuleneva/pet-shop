@@ -24,7 +24,7 @@ function ProductPage() {
         setStatus("loading");
 
         const response = await axios.get(
-          `http://localhost:3333/products/${id}`
+          `https://pet-shop-ls17.onrender.com/products/${id}`
         );
 
         const currentProduct = response.data[0];
@@ -32,7 +32,7 @@ function ProductPage() {
         setProduct(currentProduct);
 
         const categoryResponse = await axios.get(
-          `http://localhost:3333/categories/${currentProduct.categoryId}`
+          `https://pet-shop-ls17.onrender.com/categories/${currentProduct.categoryId}`
         );
 
         setCategory(categoryResponse.data.category);
@@ -84,7 +84,7 @@ function ProductPage() {
       )
     : null;
 
-  const imageUrl = `http://localhost:3333${product.image}`;
+  const imageUrl = `https://pet-shop-ls17.onrender.com${product.image}`;
 
   return (
     <div className={styles.product}>

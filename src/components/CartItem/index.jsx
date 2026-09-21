@@ -43,7 +43,7 @@ function CartItem({
       <div className={styles.imageWrapper}>
         <img
           className={styles.image}
-          src={`http://localhost:3333${product.image}`}
+          src={`https://pet-shop-ls17.onrender.com${product.image}`}
           alt={product.title}
         />
       </div>

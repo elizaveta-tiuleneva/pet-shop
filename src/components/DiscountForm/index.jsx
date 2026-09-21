@@ -31,7 +31,7 @@ function DiscountForm() {
 
     try {
       await axios.post(
-        "http://localhost:3333/sale/send",
+        "https://pet-shop-ls17.onrender.com/sale/send",
         formData
       );
 

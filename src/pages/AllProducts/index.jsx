@@ -22,7 +22,7 @@ function AllProductsPage() {
         setStatus("loading");
 
         const response = await axios.get(
-          "http://localhost:3333/products/all"
+          "https://pet-shop-ls17.onrender.com/products/all"
         );
 
         setProducts(response.data);

@@ -70,7 +70,7 @@ npm run dev
 #### Получение всех категорий
 
 ```bash
-axios.get('http://localhost:3333/categories/all')
+axios.get('https://pet-shop-ls17.onrender.com/categories/all')
   .then(response => {
     console.log(response.data);
   })
@@ -98,7 +98,7 @@ const orderData = {
   ]
 };
 
-axios.post('http://localhost:3333/order/send', orderData, {
+axios.post('https://pet-shop-ls17.onrender.com/order/send', orderData, {
   headers: {
     'Content-Type': 'application/json'
   }

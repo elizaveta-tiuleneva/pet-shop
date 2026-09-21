@@ -23,7 +23,7 @@ function OrderForm({
 
     try {
       await axios.post(
-        "http://localhost:3333/order/send",
+        "https://pet-shop-ls17.onrender.com/order/send",
         orderData
       );
 

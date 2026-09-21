@@ -5,7 +5,7 @@ function CategoryCard({ id, title, image }) {
   return (
     <Link to={`/categories/${id}`} className={styles.card}>
       <img
-        src={`http://localhost:3333${image}`}
+        src={`https://pet-shop-ls17.onrender.com${image}`}
         alt={title}
         className={styles.image}
       />
